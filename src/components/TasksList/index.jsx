@@ -1,16 +1,27 @@
-const TasksList = ({ tasks_array }) => {
+import "./tasks-list.css";
+import binIcon from "../../assets/bin-icon.svg";
+
+const TasksList = ({ tasks_array, action }) => {
     return (
-        <ul className="tasks-list">
-            {tasks_array.map((task) => {
-                console.log("from list >>> ", task);
+        <ul className="tasks-list container">
+            {tasks_array.map((current_task) => {
                 return (
-                    <li key={task.taskName}>
-                        <input
-                            type="checkbox"
-                            id={task.taskName}
-                            name={task.taskName}
-                        />
-                        <label htmlFor={task.taskName}>{task.taskName}</label>
+                    <li>
+                        <div className="input-group">
+                            <input
+                                onClick={() => { action(current_task, "task-done") }}
+                                type="checkbox"
+                                name={current_task.taskName} />
+                            <label
+                                htmlFor={current_task.taskName}
+                                className={current_task.taskDone ? `task-done` : ``}>
+                                {current_task.taskName}
+                            </label>
+                        </div>
+                        <button className="delete-button"
+                            onClick={() => { action(current_task, "task-delete") }}>
+                            <img src={binIcon} alt="bin icon" />
+                        </button>
                     </li>
                 )
             })}

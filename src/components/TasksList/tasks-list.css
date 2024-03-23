@@ -1,0 +1,46 @@
+.tasks-list {
+    padding: 0px;
+}
+
+.tasks-list li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 8px 0;
+    border-bottom: 1px solid light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
+
+.tasks-list li:last-of-type {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.tasks-list li .input-group {
+    display: flex;
+    gap: 16px;
+}
+
+.tasks-list li .input-group input[type="checkbox"] {
+    min-height: 20px;
+    min-width: 20px;
+}
+
+.tasks-list li .input-group label {
+    margin-right: 8px;
+    text-align: left;
+}
+
+.tasks-list li .input-group label.task-done {
+    text-decoration: line-through;
+}
+
+.tasks-list .delete-button {
+    padding: 4px 12px;
+}
+
+.tasks-list .delete-button img {
+    height: 24px;
+    width: 24px;
+}
