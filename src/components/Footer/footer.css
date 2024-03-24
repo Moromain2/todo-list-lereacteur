@@ -1,0 +1,22 @@
+/* === CSS for Footer component === */
+
+footer {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    margin-top: 4em;
+}
+
+footer .container {
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer .container p strong {
+    font-weight: bold;
+}
+
+@media (min-width: 640px) {
+    footer .container {
+        padding: 2em 0;
+    }
+}

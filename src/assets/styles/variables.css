@@ -16,4 +16,7 @@
 
     /* Fonts */
     --body: "Work Sans", "Arial", sans-serif;
+
+    /* Animation */
+    --transition: all ease-out 250ms;
 }

@@ -1,9 +1,9 @@
 /* === CSS for New task input component === */
-form {
+/* form {
     position: absolute;
     bottom: 4em;
     width: 100%;
-}
+} */
 
 form .container {
     display: flex;

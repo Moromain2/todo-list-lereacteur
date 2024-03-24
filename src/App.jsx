@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/Header';
 import NewTaskInput from './components/NewTaskInput';
 import TasksList from './components/TasksList';
+import Footer from './components/Footer';
 
 function App() {
   // Setting the state of the tasks list to an empty array
@@ -62,6 +63,7 @@ function App() {
       <Header />
       <TasksList tasks_array={tasksList} action={handleTaskUpdate} />
       <NewTaskInput task_to_add={handleNewTask} action={handleSubmit} />
+      <Footer />
     </>
   )
 }

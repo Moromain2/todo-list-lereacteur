@@ -1,64 +1,58 @@
 .tasks-list {
     border: 1px solid var(--grey);
     border-radius: .5em;
-    height: 70vh;
+    height: 500px;
     padding: 0 .5em;
-    overflow-x: scroll;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
+    margin-bottom: 2em;
+    scrollbar-width: none;
 }
 
 .tasks-list li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: .5em;
+    gap: 1em;
     padding: .75em 0;
     border-bottom: 1px solid var(--grey);
 }
 
+.tasks-list li:last-of-type {
+    border: none;
+}
+
 .tasks-list li input[type="checkbox"] {
-    height: 1em;
-    min-width: 1em;
-    border: 1px solid var(--text-color);
+    height: 1.5em;
+    min-width: 1.5em;
     border-radius: .25em;
+    background-image: url('../../assets/icons/checkbox-icon.svg');
+    background-repeat: none;
+    background-size: cover;
+    transition: var(--transition);
 }
 
 .tasks-list li input[type="checkbox"]:checked {
-    background-color: var(--purple);
+    background-image: url('../../assets/icons/active-checkbox-icon.svg');
 }
 
 .tasks-list li label {
     width: 100%;
+    transition: var(--transition);
 }
 
-/* .tasks-list li {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.tasks-list li .input-group {
-    display: flex;
-    gap: 16px;
-}
-
-.tasks-list li .input-group label {
-    margin-right: 8px;
-    text-align: left;
-}
-
-.tasks-list li .input-group label.task-done {
+.tasks-list li label.task-done {
+    color: var(--grey);
     text-decoration: line-through;
 }
 
-.tasks-list .delete-button {
-    padding: 4px 12px;
-}
+@media (min-width: 640px) {
+    .tasks-list {
+        padding: 0 1em;
+    }
 
-.tasks-list .delete-button img {
-    height: 24px;
-    width: 24px;
-} */
+    .tasks-list li input[type="checkbox"]:hover {
+        cursor: pointer;
+    }
+}

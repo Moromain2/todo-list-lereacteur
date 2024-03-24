@@ -12,7 +12,7 @@ const TasksList = ({ tasks_array, action }) => {
             <ul className="tasks-list">
                 {tasks_array.map((current_task) => {
                     return (
-                        <li>
+                        <li key={current_task.taskName}>
                             <input
                                 onClick={() => { action(current_task, "task-done") }}
                                 type="checkbox"
