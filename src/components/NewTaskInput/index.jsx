@@ -9,6 +9,7 @@ import PlusIcon from "../../assets/icons/PlusIcon";
 import Button from "../Button";
 
 const NewTaskInput = ({ task_to_add, action }) => {
+    // let tasksExists = action();
     return (
         <form onSubmit={action}>
             <div className="container">
@@ -23,10 +24,11 @@ const NewTaskInput = ({ task_to_add, action }) => {
                         placeholder="New task"
                         className="input-field"
                         onChange={task_to_add} />
-                    <div className="input-label-container alert">
+                    {/* Onlu show the alert when the task already exists */}
+                    {/* <div className="input-label-container alert">
                         <AlertIcon />
                         <p className="input-label">This task already exists</p>
-                    </div>
+                    </div> */}
                 </div>
                 <Button type="submit" value="Add task" icon={<PlusIcon />} />
             </div>

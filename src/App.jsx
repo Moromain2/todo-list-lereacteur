@@ -14,7 +14,7 @@ function App() {
   // Setting the state of the task to an objet
   const [task, setTask] = useState({
     taskName: "",
-    taskDone: false
+    taskDone: false,
   })
 
   const handleNewTask = (e) => {
@@ -52,6 +52,13 @@ function App() {
     e.preventDefault();
     // Clone of the tasks list
     const tasksListClone = [...tasksList];
+    // If the task name already exists
+    for (let i = 0; i < tasksListClone.length; i++) {
+      if (tasksListClone[i].taskName === task.taskName) {
+        alert("This task already exists");
+        return;
+      }
+    }
     // Addition of the task submited to the clone
     tasksListClone.push(task);
     // Setting the new state of the global task list to the clone
