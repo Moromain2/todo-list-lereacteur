@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 // Components import
+import Header from './components/Header';
 import NewTaskInput from './components/NewTaskInput';
 import TasksList from './components/TasksList';
 
@@ -58,6 +59,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <TasksList tasks_array={tasksList} action={handleTaskUpdate} />
       <NewTaskInput task_to_add={handleNewTask} action={handleSubmit} />
     </>

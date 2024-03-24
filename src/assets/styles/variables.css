@@ -1,0 +1,19 @@
+/* === VARIABLES === */
+
+/* Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Colors */
+    color-scheme: light dark;
+    --white: #EBEBFA;
+    --black: #191923;
+    --grey: #64647D;
+    --red: #E14646;
+    --purple: #9747FF;
+    --text-color: light-dark(var(--black), var(--white));
+    --bg-color: light-dark(var(--white), var(--black));
+
+    /* Fonts */
+    --body: "Work Sans", "Arial", sans-serif;
+}

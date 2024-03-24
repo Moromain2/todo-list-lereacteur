@@ -1,0 +1,39 @@
+/* === CSS for Button component === */
+
+.button {
+    background-color: var(--purple);
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: .25em;
+    padding: .5em .75em;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.button span {
+    text-wrap: nowrap;
+}
+
+.button svg {
+    fill: var(--white);
+    height: .75em;
+    width: .75em;
+}
+
+.button.danger {
+    background-color: var(--red);
+    font-size: .75em;
+}
+
+.button.danger svg {
+    height: .5em;
+    width: .5em;
+}
+
+@media (min-width: 640px) {
+    .button:hover {
+        cursor: pointer;
+    }
+}

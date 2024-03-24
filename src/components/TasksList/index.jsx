@@ -1,31 +1,39 @@
 import "./tasks-list.css";
-import binIcon from "../../assets/bin-icon.svg";
+
+// Icons imports
+import CrossIcon from "../../assets/icons/CrossIcon";
+
+// Components imports
+import Button from "../Button";
 
 const TasksList = ({ tasks_array, action }) => {
     return (
-        <ul className="tasks-list container">
-            {tasks_array.map((current_task) => {
-                return (
-                    <li>
-                        <div className="input-group">
+        <div className="container">
+            <ul className="tasks-list">
+                {tasks_array.map((current_task) => {
+                    return (
+                        <li>
                             <input
                                 onClick={() => { action(current_task, "task-done") }}
                                 type="checkbox"
-                                name={current_task.taskName} />
+                                name={current_task.taskName}
+                            />
                             <label
                                 htmlFor={current_task.taskName}
                                 className={current_task.taskDone ? `task-done` : ``}>
                                 {current_task.taskName}
                             </label>
-                        </div>
-                        <button className="delete-button"
-                            onClick={() => { action(current_task, "task-delete") }}>
-                            <img src={binIcon} alt="bin icon" />
-                        </button>
-                    </li>
-                )
-            })}
-        </ul>
+                            <Button
+                                value={"Delete"}
+                                action={() => { action(current_task, "task-delete") }}
+                                additional_class={"danger"}
+                                icon={<CrossIcon />}
+                            />
+                        </li>
+                    )
+                })}
+            </ul>
+        </div>
     )
 }
 
